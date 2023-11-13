@@ -103,6 +103,7 @@ section {
     font-size: 2rem;
     text-align: center;
     font-weight: 400;
+    padding: 1em;
     text-decoration: underline;
 }
 
@@ -490,7 +491,8 @@ footer p {
 
     .sec-header {
         font-size: 2.5rem;
-        padding: 4em;
+        padding: 1em;
+
     }
 }
 
