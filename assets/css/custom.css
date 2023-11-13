@@ -4,9 +4,7 @@
     --lightPinkTrans: rgba(243, 183, 213, 0.95);
     --lightPinkShadow: rgb(207, 135, 171);
     --darkPurple: rgb(51, 46, 91);
-    --coral: rgb(253,
-            114,
-            114);
+    --coral: #fd7272;
     --pinkBorderBox: 4px 4px 5px var(--lightPinkShadow);
 }
 
