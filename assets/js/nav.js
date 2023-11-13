@@ -13,7 +13,7 @@
 
 document.addEventListener("DOMContentLoaded", function (event) {
         const menu = document.querySelector('.menu');
-        const menuItems = document.querySelectorAll('.menuItem');
+        const menuItems = document.querySelectorAll('.ham-menu');
 
             function toggleMenu() {
                 if (menu.classList.contains('showMenu')) {

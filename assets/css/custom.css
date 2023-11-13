@@ -82,11 +82,18 @@ section {
     width: 100%;
     margin: 100px auto;
     text-align: center;
-    padding: 3em;
+    padding: 1em;
     border-radius: 5em;
     color: var(--coral);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
+}
+
+.hero h1 {
+
+    font-family: "Sansita Swashed";
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 .sec-header {
@@ -96,16 +103,10 @@ section {
     font-size: 2rem;
     text-align: center;
     font-weight: 400;
-    padding: 1em;
     text-decoration: underline;
 }
 
-.hero h1 {
 
-    font-family: "Sansita Swashed";
-    font-size: 4rem;
-    font-weight: 600;
-}
 
 
 
@@ -461,6 +462,15 @@ footer p {
 @media screen and (min-width: 1050px) {
     .show-title {
         display: inline-block;
+    }
+
+    .hero {
+        font-size: 1.4em;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        padding: 2rem;
     }
 
     .type-card-box {
