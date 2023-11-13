@@ -1,0 +1,503 @@
+/* Custom Properties */
+:root {
+    --lightPink: rgb(243, 183, 213, );
+    --lightPinkTrans: rgba(243, 183, 213, 0.95);
+    --lightPinkShadow: rgb(207, 135, 171);
+    --darkPurple: rgb(51, 46, 91);
+    --coral: rgb(253,
+            114,
+            114);
+    --pinkBorderBox: 4px 4px 5px var(--lightPinkShadow);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h3 {
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--lightPink);
+    background-image: linear-gradient(var(--lightPinkTrans), rgba(251, 211, 216, 0.95)),
+        url("/assets/images/hash.svg");
+    font-family: "Raleway";
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+#landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes bounce-side {
+    from {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(0.08turn);
+        transition-timing-function: ease-in-out;
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+.arrow img {
+    height: 10vh;
+    animation-name: bounce-side;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.hero {
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+    padding: 3em;
+    border-radius: 5em;
+    color: var(--coral);
+    font-size: 1.4rem;
+
+}
+
+.sec-header {
+    color: var(--coral);
+    width: 80%;
+    margin: auto;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 3em;
+    text-decoration: underline;
+}
+
+.hero h1 {
+
+    font-family: "Sansita Swashed";
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.spinner-container {
+    display: flex;
+    width: 70%;
+    margin: 100px auto;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    background-image:
+        url("/assets/images/confetti.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    border: 1px solid gray;
+    border-bottom: 6px solid grey;
+    border-radius: 20%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+
+@keyframes donut-spin {
+    to {
+        transform: rotate(1000deg);
+    }
+}
+
+.spinning-donut {
+    height: 60%;
+    margin: auto;
+    animation: donut-spin linear;
+    animation-duration: auto;
+    animation-timeline: scroll(root block);
+}
+
+/* Menu Button  */
+.hamburger {
+    display: inline-block;
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-120%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+.menuItem {
+    display: block;
+    font-size: 1.8rem;
+}
+
+.show-title {
+    display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/*  Mobile Menu */
+nav {
+    display: flex;
+    z-index: 5;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: .5em;
+    margin-bottom: 0;
+    color: white;
+}
+
+nav a:hover {
+    color: rgb(237, 236, 236);
+}
+
+nav a:visited {
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    z-index: 100;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.donut-icon {
+    padding: 0;
+    font-size: 4rem;
+}
+
+/* Donut Timeline Section */
+
+.timeline ul {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+
+}
+
+.timeline-event {
+    grid-column: span 2;
+    font-size: 1.2em;
+    color: var(--darkPurple);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--lightPinkShadow);
+    border-bottom: 3px solid var(--lightPinkShadow);
+    box-shadow: 5px 3px 5px var(--lightPinkShadow);
+}
+
+.timeline-event:nth-child(even) {
+    grid-column-end: -1;
+    background-color: rgb(255, 255, 255);
+}
+
+time {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    color: var(--darkPurple);
+    background: repeating-linear-gradient(-90deg, var(--darkPurple) 0 5px, #0000 0 10px) 95%/30% 2px no-repeat;
+}
+
+time:nth-child(even) {
+    grid-column: 3;
+    background: repeating-linear-gradient(-90deg, var(--darkPurple) 0 5px, #0000 0 10px) 5%/30% 2px no-repeat;
+}
+
+.type-card-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    gap: 30px;
+    width: 85%;
+    margin: auto;
+}
+
+.type-card img {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid var(--lightPink);
+    border-radius: 2rem;
+    box-shadow: var(--pinkBorderBox);
+}
+
+/* Learn more */
+
+.learn-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.learn-links li {
+    background-color: white;
+    font-size: 2em;
+    padding: 2em;
+    border-radius: 1em;
+    border: 1px solid var(--lightPink);
+    box-shadow: var(--pinkBorderBox);
+    margin: 1em;
+}
+
+.learn-links li:hover {
+    box-shadow: 2px 2px 5px var(--lightPinkShadow);
+    background-color: rgb(246, 241, 241);
+}
+
+.learn-links a {
+    color: var(--darkPurple);
+}
+
+.learn-links a:visited {
+    color: var(--darkPurple);
+}
+
+
+/* Footer  */
+
+footer {
+    background-color: var(--coral);
+}
+
+footer p {
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    color: var(--darkPurple);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 500px) {
+    .spinner-container {
+        width: 60%;
+        height: 35vh;
+    }
+
+    .spinner-container img {
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .type-card-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        transform: translateY(0);
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    nav {
+        display: flex;
+        z-index: 5;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        height: 100px;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-family: "Raleway";
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: .5em;
+        margin-bottom: 0;
+    }
+
+    .spinner-container {
+        width: 70%;
+        height: 45vh;
+        margin: 100px auto;
+        background-attachment: fixed;
+        border-radius: 20%;
+    }
+
+    .spinning-donut {
+        width: 60%;
+        height: auto;
+    }
+
+    .timeline ul {
+        grid-template-columns: repeat(3, 200px);
+    }
+
+}
+
+@media screen and (min-width: 1050px) {
+    .show-title {
+        display: inline-block;
+    }
+
+    .type-card-box {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .spinner-container {
+        width: 60vw;
+        height: 40vh;
+        margin: 100px auto;
+    }
+
+    .spinning-donut {
+        width: 30%;
+        height: auto;
+    }
+
+    .sec-header {
+        font-size: 2.5rem;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .spinner-container {
+        width: 30vw;
+        height: 40vh;
+        margin: 100px auto;
+    }
+
+    .spinning-donut {
+        width: 25%;
+        height: auto;
+    }
+
+    .hero {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+    }
+
+
+}
