@@ -254,6 +254,7 @@ nav a:visited {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    text-decoration: none;
 }
 
 .title a {
