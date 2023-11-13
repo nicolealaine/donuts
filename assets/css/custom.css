@@ -96,7 +96,7 @@ section {
     font-size: 2rem;
     text-align: center;
     font-weight: 400;
-    padding: 3em;
+    padding: 1em;
     text-decoration: underline;
 }
 
@@ -335,6 +335,7 @@ time:nth-child(even) {
     justify-content: space-evenly;
     padding-bottom: 4rem;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .learn-links li {
@@ -479,7 +480,7 @@ footer p {
 
     .sec-header {
         font-size: 2.5rem;
-
+        padding: 4em;
     }
 }
 
